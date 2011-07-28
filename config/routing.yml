@@ -1,0 +1,16 @@
+#Frontend cart routes
+dd_shopping_cart:
+  url:                    /cart
+  param:                  { module: ddShoppingCart, action: index }
+  
+dd_shopping_cart_add_item:
+  url:                    /cart/add-item/:item_id
+  param:                  { module: ddShoppingCart, action: addItem }
+  
+dd_shopping_cart_set_item_quantity:
+  url:                    /cart/set-item-quantity/:item_id
+  param:                  { module: ddShoppingCart, action: setItemQuantity }
+  
+dd_shopping_cart_delete_item:
+  url:                    /cart/delete-item/:item_id
+  param:                  { module: ddShoppingCart, action: deleteItem }

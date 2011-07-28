@@ -1,0 +1,58 @@
+# ddShoppingCart plugin #
+
+The `ddShoppingCartPlugin` is a symfony plugin that providethe capability to create a shopping cart based website. 
+You can use the another plugin together with this: "[ddOnlineStorePlugin](http://www.symfony-project.org/plugins/ddOnlineStorePlugin "ddOnlineStorePlugin")" to make an ecommerce solution.
+
+## Dependencies ##
+
+This plugin doesn't have strict dependencies, but needs the following to work:
+
+*   [ddOnlineStorePlugin](http://www.symfony-project.org/plugins/ddOnlineStorePlugin "ddOnlineStorePlugin").
+
+## Installation ##
+
+You have two different ways to install this plugin:
+
+*   Via a package
+
+        symfony plugin:install ddShoppingCartPlugin
+
+*   Via a Subversion checkout
+  
+        svn co http//svn.symfony-project.com/plugins/ddShoppingCartPlugin/trunk plugins/ddShoppingCartPlugin
+
+## General Setup ##
+
+*   Activate the plugin in the `config/ProjectConfiguration.class.php`
+  
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              '...',
+              'ddOnlineStorePlugin'
+            ));
+          }
+        }
+        
+*   Add the following code in the user class `apps/[your_app]/lib/myUser.class.php`
+  
+        [php]
+		/**
+		 * @return ddShoppingCart
+		 */
+		public function getShoppingCart()
+		{
+			if (!$this->hasAttribute('shopping_cart'))
+			{
+				$this->setAttribute('shopping_cart', new ddShoppingCart());
+			}
+
+			return $this->getAttribute('shopping_cart');
+		}
+
+*   Clear you cache
+
+        symfony cc
