@@ -30,7 +30,13 @@ abstract class BaseddShoppingCartActions extends sfActions
 		$item->addQuantity($request->getParameter('quantity', 1));
 		$item->setPrice($product->getPrice());
 		
-		$this->redirect('@dd_shopping_cart');
+		if($request->isXmlHttpRequest())
+		{
+			return $this->renderText(json_encode(array('status' => 'ok', 'items' => $cart->getNbItems())));
+		}else
+		{
+			$this->redirect('@dd_shopping_cart');
+		}
 	}
 	
 	public function executeDeleteItem(sfWebRequest $request)
