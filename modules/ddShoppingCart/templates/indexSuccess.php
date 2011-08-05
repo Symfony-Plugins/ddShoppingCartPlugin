@@ -41,7 +41,7 @@
 	 
 	<br clear="all" />
          
-	<div class="bt-pedido"><input type="submit" value="Realizar Pedido"></div>
+	<div class="bt-pedido"><a href="<?php echo url_for('dd_shopping_cart_order') ?>">Realizar Pedido</a></div>
 	<!--End Carrito-->
 	
 	<br clear="all" />

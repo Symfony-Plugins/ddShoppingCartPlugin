@@ -14,3 +14,7 @@ dd_shopping_cart_set_item_quantity:
 dd_shopping_cart_delete_item:
   url:                    /cart/delete-item/:item_id
   param:                  { module: ddShoppingCart, action: deleteItem }
+  
+dd_shopping_cart_order:
+  url:                    /cart/order
+  param:                  { module: ddShoppingCart, action: order }
