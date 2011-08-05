@@ -5,8 +5,8 @@
 		<br clear="all" />
 	</div> 
 	<div class="gracias">
-		Sus datos han sido registrado con &eacute;xito.<br />
-		En breve enviaremos por email su usuario y password.<br>  
+		El pedido fué realizado con éxito.<br />
+		En breve responderemos a su solicitud.<br>  
 	</div>
 
 	<br clear="all" />
