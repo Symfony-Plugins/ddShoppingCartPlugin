@@ -5,7 +5,7 @@
 		<br clear="all" />
 	</div> 
 	<div class="gracias">
-		El pedido fué realizado con éxito.<br />
+		El pedido fu&eacute; realizado con &eacute;xito.<br />
 		En breve responderemos a su solicitud.<br>  
 	</div>
 
